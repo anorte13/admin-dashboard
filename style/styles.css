@@ -24,7 +24,7 @@
 .header {
    display: flex;
    justify-self: flex-start;
-   align-content: center;
+   align-items: center;
    gap: 10px;
    flex: 1;
    grid-row: 1/1;
@@ -42,6 +42,7 @@
 .menu-items {
     display: flex;
     justify-self: flex-start;
+    align-items: center;
     gap: 20px;
     flex: 1;
 }
@@ -56,6 +57,7 @@
 .setting-items {
     display: flex;
     justify-self: flex-start;
+    align-items: center;
     gap: 20px;
     flex: 1;
 }
@@ -65,7 +67,10 @@
 }
 .main-header {
     background-color: grey;
-    grid-row: 1/3;
+    grid-row: 1/1;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 .main-header > div {
     color: white;
@@ -73,4 +78,63 @@
     font-size: 20px;
     font-family: helvetica;
     font-weight: bold;
+}
+.main-header-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-row: 1/2;
+}
+.search {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.search > img {
+    width: 20px;
+    height: 20px;
+}
+.user-settings {
+    display: flex;
+    gap: 30px;
+    margin-right: 50px;
+    align-items: center;
+}
+.user-settings > img {
+    width: 25px;
+    height: 25px;
+}
+.main-header-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-row: 2/3
+}
+.welcome-menu {
+    display: flex;
+    flex-direction: row;
+}
+.welcome-menu > img {
+    height: 100px;
+    width: 100px;
+}
+.user-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.user-media-settings {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+button {
+    background-color: green;
+    border: none;
+    border-radius: 20px;
+    height: min(30px);
+    width: min(80px);
+    color: white;
+    font-weight: bold;
+    text-align: center;
 }
